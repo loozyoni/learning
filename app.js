@@ -11,7 +11,7 @@ const postsRouter = require("./routes/posts")
 app.use('/posts', postsRouter)
 
 mongoose.connect(process.env.DB_CONNECTION,
-    {useUnifiedTopology: true},
+    {useUnifiedTopology: true, useNewUrlParser: true},
     () => console.log("connected to mogodb"))
 
 app.listen(3000)
